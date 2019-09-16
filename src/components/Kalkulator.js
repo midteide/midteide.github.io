@@ -25,12 +25,8 @@ class Kalkulator extends React.Component {
         var inputNumber = event;
         //let disp=0;
         if (!isNaN(inputNumber)){
-            if (this.state.newNumber) {
-                console.log("newnumber")
-                await this.setState({display: `${inputNumber}`, newNumber: false})
-                
-            } 
-            else await this.setState({display: `${this.state.display}${inputNumber}`})
+            if (this.state.newNumber)  await this.setState({display: `${inputNumber}`, newNumber: false}) 
+            else if (this.state.display.length < 25) await this.setState({display: `${this.state.display}${inputNumber}`})
         }
         if ((inputNumber === "+") || (inputNumber === "-") || (inputNumber === "/") || (inputNumber === "x")|| (inputNumber === "=")) {
             if (this.state.firstCalc) await this.setState({answer: this.state.display, firstCalc: false, operator: inputNumber})
@@ -48,7 +44,6 @@ class Kalkulator extends React.Component {
         }
         
         else if ((inputNumber === "AC") || (inputNumber === "Escape") ) {
-            //await this.setState({display: inputNumber})
             await this.setState({answer: 0,
                 display: 0,
                 firstCalc: true,
@@ -56,27 +51,16 @@ class Kalkulator extends React.Component {
                 operator: ""})
             console.log("Clear ble trykket")
         }
-        else if (inputNumber === "t") {
-            //await this.setState({display: inputNumber})
-            let test = Number(this.state.display) + 2;
-            await this.setState({answer: 0, display: test})
-            console.log("Clear ble trykket")
-        }
         else if ((inputNumber === ",") ){
             try {
                 if (this.state.newNumber) {
                     this.setState({display: "0."})
-                    console.log("er 0")
                 }
                 else if (this.state.display.indexOf('.') === -1) {
-                    console.log("ja")
                     let disp = `${this.state.display}${"."}`
-                    //if (this.state.readyForNewInput) { disp = "0."; )}
                     await this.setState({display: disp})
                 }
-                else console.log("Nei")
                 await this.setState({newNumber: false})
-                console.log("slutt")
             }
             catch (e) { console.log(e) }
         }
@@ -90,7 +74,9 @@ class Kalkulator extends React.Component {
             }
         }
         //else if (inputNumber === "=") console.log("=+, answer1: ",this.state.answer);
-        if (this.state.inputOk) await this.setState({readyForNewInput: true, inputOk: false})       
+        if (this.state.inputOk) await this.setState({readyForNewInput: true, inputOk: false})    
+        console.log(this.state.display.length)
+        
     }
 
     
