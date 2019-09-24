@@ -34,9 +34,9 @@ export const KalkButton = (props) => {
     //((props.children === "0" ) || (props.children || "=" ) ) ? cssStyle = `${cssStyle} clear-btn` : console.log("Hei");
     return (
     
-        <button className={cssStyle} onKeyDown={(event) => props.ClickHandler(event.key)} onClick={(event) => props.ClickHandler(event.currentTarget.innerText
+        <button className={cssStyle} onKeyDown={(event) => props.clickHandler(event.key)} onClick={(event) => props.clickHandler(event.currentTarget.innerText
         )} >{props.children}</button>
                             
     )
-    }
+}
 

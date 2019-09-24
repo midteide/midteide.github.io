@@ -17,16 +17,16 @@ class Kalkulator extends React.Component {
             newNumber: true,
             operator: ""
         }
-        this.ClickHandler = this.ClickHandler.bind(this);
-        //this.ClickHandler = this.ClickHandler.bind(this);
+        this.clickHandler = this.clickHandler.bind(this);
+        //this.clickHandler = this.clickHandler.bind(this);
     }
 
-    async ClickHandler(event){
+    async clickHandler(event){
         var inputNumber = event;
         //let disp=0;
         if (!isNaN(inputNumber)){
             if (this.state.newNumber)  await this.setState({display: `${inputNumber}`, newNumber: false}) 
-            else if (this.state.display.length < 25) await this.setState({display: `${this.state.display}${inputNumber}`})
+            else if (this.state.display.length < 24) await this.setState({display: `${this.state.display}${inputNumber}`})
         }
         if ((inputNumber === "+") || (inputNumber === "-") || (inputNumber === "/") || (inputNumber === "x")|| (inputNumber === "=")) {
             if (this.state.firstCalc) await this.setState({answer: this.state.display, firstCalc: false, operator: inputNumber})
@@ -93,32 +93,32 @@ class Kalkulator extends React.Component {
                         <Input input={this.state.display}/>
                         
                         <div className="row">
-                            <KalkButton ClickHandler={this.ClickHandler}>AC</KalkButton>
-                            <KalkButton ClickHandler={this.ClickHandler}>D</KalkButton>
-                            <KalkButton ClickHandler={this.ClickHandler}>,</KalkButton>
-                            <KalkButton ClickHandler={this.ClickHandler}>/</KalkButton>
+                            <KalkButton clickHandler={this.clickHandler}>AC</KalkButton>
+                            <KalkButton clickHandler={this.clickHandler}>D</KalkButton>
+                            <KalkButton clickHandler={this.clickHandler}>,</KalkButton>
+                            <KalkButton clickHandler={this.clickHandler}>/</KalkButton>
                         </div>
                         <div className="row">
-                            <KalkButton ClickHandler={this.ClickHandler}>7</KalkButton>
-                            <KalkButton ClickHandler={this.ClickHandler}>8</KalkButton>
-                            <KalkButton ClickHandler={this.ClickHandler}>9</KalkButton>
-                            <KalkButton ClickHandler={this.ClickHandler}>x</KalkButton>
+                            <KalkButton clickHandler={this.clickHandler}>7</KalkButton>
+                            <KalkButton clickHandler={this.clickHandler}>8</KalkButton>
+                            <KalkButton clickHandler={this.clickHandler}>9</KalkButton>
+                            <KalkButton clickHandler={this.clickHandler}>x</KalkButton>
                         </div>
                         <div className="row">
-                            <KalkButton ClickHandler={this.ClickHandler}>4</KalkButton>
-                            <KalkButton ClickHandler={this.ClickHandler}>5</KalkButton>
-                            <KalkButton ClickHandler={this.ClickHandler}>6</KalkButton>
-                            <KalkButton ClickHandler={this.ClickHandler}>-</KalkButton>
+                            <KalkButton clickHandler={this.clickHandler}>4</KalkButton>
+                            <KalkButton clickHandler={this.clickHandler}>5</KalkButton>
+                            <KalkButton clickHandler={this.clickHandler}>6</KalkButton>
+                            <KalkButton clickHandler={this.clickHandler}>-</KalkButton>
                         </div>
                         <div className="row">
-                            <KalkButton ClickHandler={this.ClickHandler}>1</KalkButton>
-                            <KalkButton ClickHandler={this.ClickHandler}>2</KalkButton>
-                            <KalkButton ClickHandler={this.ClickHandler}>3</KalkButton>
-                            <KalkButton ClickHandler={this.ClickHandler}>+</KalkButton>
+                            <KalkButton clickHandler={this.clickHandler}>1</KalkButton>
+                            <KalkButton clickHandler={this.clickHandler}>2</KalkButton>
+                            <KalkButton clickHandler={this.clickHandler}>3</KalkButton>
+                            <KalkButton clickHandler={this.clickHandler}>+</KalkButton>
                         </div>
                         <div className="row">
-                            <KalkButton ClickHandler={this.ClickHandler}>0</KalkButton>
-                            <KalkButton ClickHandler={this.ClickHandler}>=</KalkButton>
+                            <KalkButton clickHandler={this.clickHandler}>0</KalkButton>
+                            <KalkButton clickHandler={this.clickHandler}>=</KalkButton>
                         
                         </div>
                     </div>
@@ -134,39 +134,39 @@ class Kalkulator extends React.Component {
                 <br/>
                 <div>
                     <ButtonGroup size="lg"> 
-                    <Button variant="primary" name="getResult" onClick={() => this.ClickHandler()} >1</Button>
-                    <Button variant="primary" name="getResult" onClick={() => this.ClickHandler(2)} >2</Button>
-                    <Button variant="primary" name="getResult" onClick={() => this.ClickHandler(3)} >3</Button>
-                    <Button variant="primary" name="getResult" onClick={() => this.ClickHandler("+")} >+</Button>
+                    <Button variant="primary" name="getResult" onClick={() => this.clickHandler()} >1</Button>
+                    <Button variant="primary" name="getResult" onClick={() => this.clickHandler(2)} >2</Button>
+                    <Button variant="primary" name="getResult" onClick={() => this.clickHandler(3)} >3</Button>
+                    <Button variant="primary" name="getResult" onClick={() => this.clickHandler("+")} >+</Button>
                 </ButtonGroup></div>
                 <div>
                 <ButtonGroup size="lg">
-                    <Button variant="primary" name="getResult" onClick={() => this.ClickHandler(4)} >4</Button>
-                    <Button variant="primary" name="getResult" onClick={() => this.ClickHandler(5)} >5</Button>
-                    <Button variant="primary" name="getResult" onClick={() => this.ClickHandler(6)} >6</Button>
-                    <Button variant="primary" name="getResult" onClick={() => this.ClickHandler("-")} >-</Button>
+                    <Button variant="primary" name="getResult" onClick={() => this.clickHandler(4)} >4</Button>
+                    <Button variant="primary" name="getResult" onClick={() => this.clickHandler(5)} >5</Button>
+                    <Button variant="primary" name="getResult" onClick={() => this.clickHandler(6)} >6</Button>
+                    <Button variant="primary" name="getResult" onClick={() => this.clickHandler("-")} >-</Button>
                 </ButtonGroup></div>
                 <div>
                 <ButtonGroup size="lg">
-                    <Button variant="primary" name="getResult" onClick={() => this.ClickHandler(7)} >7</Button>
-                    <Button variant="primary" name="getResult" onClick={() => this.ClickHandler(8)} >8</Button>
-                    <Button variant="primary" name="getResult" onClick={() => this.ClickHandler(9)} >9</Button>
-                    <Button variant="primary" name="getResult" onClick={() => this.ClickHandler("x")} >x</Button>
+                    <Button variant="primary" name="getResult" onClick={() => this.clickHandler(7)} >7</Button>
+                    <Button variant="primary" name="getResult" onClick={() => this.clickHandler(8)} >8</Button>
+                    <Button variant="primary" name="getResult" onClick={() => this.clickHandler(9)} >9</Button>
+                    <Button variant="primary" name="getResult" onClick={() => this.clickHandler("x")} >x</Button>
                 </ButtonGroup></div>
                 <div>
                 <ButtonGroup size="lg">
-                    <Button variant="primary" name="getResult" onClick={() => this.ClickHandler(0)} >0</Button>
-                    <Button variant="primary" name="getResult" onClick={() => this.ClickHandler("s")} >S</Button>
-                    <Button variant="primary" name="getResult" onClick={() => this.ClickHandler(",")} >,</Button>
-                    <Button variant="primary" name="getResult" onClick={() => this.ClickHandler("/")} >/</Button>
+                    <Button variant="primary" name="getResult" onClick={() => this.clickHandler(0)} >0</Button>
+                    <Button variant="primary" name="getResult" onClick={() => this.clickHandler("s")} >S</Button>
+                    <Button variant="primary" name="getResult" onClick={() => this.clickHandler(",")} >,</Button>
+                    <Button variant="primary" name="getResult" onClick={() => this.clickHandler("/")} >/</Button>
                 </ButtonGroup>
             </div>
             <div>
                 <ButtonGroup size="lg">
-                    <Button variant="primary" name="getResult" onClick={() => this.ClickHandler("C")} >C</Button>
-                    <Button variant="primary" name="getResult" onClick={() => this.ClickHandler("D")} >{`<-`}</Button>
-                    <Button variant="primary" name="getResult" onClick={() => this.ClickHandler(",")} >,</Button>
-                    <Button variant="primary" name="getResult" onClick={() => this.ClickHandler("=")} >=</Button>
+                    <Button variant="primary" name="getResult" onClick={() => this.clickHandler("C")} >C</Button>
+                    <Button variant="primary" name="getResult" onClick={() => this.clickHandler("D")} >{`<-`}</Button>
+                    <Button variant="primary" name="getResult" onClick={() => this.clickHandler(",")} >,</Button>
+                    <Button variant="primary" name="getResult" onClick={() => this.clickHandler("=")} >=</Button>
                 </ButtonGroup></div>
             </div>
         )

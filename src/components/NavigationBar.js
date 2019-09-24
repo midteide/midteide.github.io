@@ -23,8 +23,11 @@ export const NavigationBar = () => (
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="ml-auto">
                         <Nav.Item><Nav.Link href="/">Home</Nav.Link></Nav.Item>
-                        <Nav.Item><Nav.Link href="/calculator">Project: Calculator</Nav.Link></Nav.Item>
-                        <Nav.Item><Nav.Link href="/memepage">Project: MemeGenerator</Nav.Link></Nav.Item>
+                        <Nav.Item><Nav.Link href="/calculator">React: Calculator</Nav.Link></Nav.Item>
+                        <Nav.Item><Nav.Link href="/memepage">React: MemeGenerator</Nav.Link></Nav.Item>
+                        <Nav.Item><Nav.Link href="/moisturesensor">C: Moisture Sensor</Nav.Link></Nav.Item>
+                        <Nav.Item><Nav.Link href="/cabincontrol">C/C#: CabinControl</Nav.Link></Nav.Item>
+                        <Nav.Item><Nav.Link href="/chessclock">C: Chess Clock</Nav.Link></Nav.Item>
                         <Nav.Item><Nav.Link href="/about">About</Nav.Link></Nav.Item>
                         <Nav.Item><Nav.Link href="/contact">Contact</Nav.Link></Nav.Item>
                 </Nav>
