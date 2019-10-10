@@ -1,5 +1,4 @@
 import React from 'react'
-import Kalkulator from './components/Kalkulator'
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import Carousel from 'react-bootstrap/Carousel'

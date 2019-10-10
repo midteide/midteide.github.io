@@ -1,6 +1,6 @@
 import React, {Component} from "react"
 //import { tsConstructorType } from "@babel/types";
-//import "./style.css"
+import "./style.css"
 
 class MemeGenerator extends React.Component{
     

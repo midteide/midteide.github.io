@@ -1,5 +1,4 @@
 import React from 'react'
-import Kalkulator from './components/Kalkulator'
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import Carousel from 'react-bootstrap/Carousel'
@@ -45,9 +44,12 @@ export const MoistureSensor = () =>   {
                 
                 
             </Carousel>
+            <div id="plass"></div>
+            <h2>Source code:</h2>
+            </Col>
+    </Container>
             <div id="fukt">
-			<h2>Source code:</h2>
-            <SyntaxHighlighter language="c" style={docco}>
+		        <SyntaxHighlighter language="c" style={docco}>
       {`
       
       /*********************************************************
@@ -676,8 +678,7 @@ export const MoistureSensor = () =>   {
       `}
     </SyntaxHighlighter>
     </div>
-    </Col>
-    </Container>
+    
         </div>
     )
 }

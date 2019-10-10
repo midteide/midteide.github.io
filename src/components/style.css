@@ -83,6 +83,11 @@ header > p {
     height: 40px;
 }
 
+#plass {
+    margin: 30px 30px;
+    padding: 30px 30px;
+}
+
 .meme-form > button {
     border: none;
     font-family: VT323, monospace;
@@ -114,7 +119,8 @@ header > p {
   text-align: cen
 }
 
-#fukt {
-    padding: 10em 10em;
-    margin: 10em 10em;
+@media (min-width: 600px) {
+    p {
+        font-size: 1.25rem;;
+    }
 }

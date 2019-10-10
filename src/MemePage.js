@@ -1,5 +1,7 @@
 import React from 'react'
 import MemeGenerator from './components/MemeGenerator'
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
 export const MemePage = () =>   {
     return (
@@ -8,8 +10,8 @@ export const MemePage = () =>   {
                 Random meme generator
             </h1>
             <MemeGenerator />
-        <h1>Hei</h1>
-        <pre><code>
+            <h1>Source code:</h1>
+        <pre><SyntaxHighlighter language="react" style={docco}>
             {`
             import React, {Component} from "react"
             //import { tsConstructorType } from "@babel/types";
@@ -129,7 +131,7 @@ export const MemePage = () =>   {
             
             export default MemeGenerator
             `}
-        </code></pre>
+        </SyntaxHighlighter></pre>
         </div>
     )
 }
