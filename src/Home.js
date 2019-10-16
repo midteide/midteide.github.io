@@ -15,6 +15,7 @@ import ImageZoom from 'react-medium-image-zoom'
 import './index.css'
 
 
+
 export const Home = () =>   {
     return (
         
@@ -22,10 +23,13 @@ export const Home = () =>   {
             <Container className="mb-5">
                 <Col xs={12}>
                 
-        
+                
       
                     <h1>A few of my projects</h1>
-                    <p>I have made this website (with React) in order to showcase some of what I have made in the past:</p>
+                    <p>I have made this website (with React) in order to showcase some of what I have made in the past,
+                        both with React.js, JavaScript, HTML/CSS/Bootstrap and also low-level C programming, C++ and C# .Net. I also have
+                        experience with Java programming.
+                    </p>
                 </Col>
             </Container>
                     

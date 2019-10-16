@@ -5,8 +5,9 @@ import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
 export const Calculator = () =>   {
     return (
-        <div>
-            <h1>
+        <div className="row">
+            <div className="col-12">
+            <h1 style={{'text-align': 'center'}}>
                 Calculator project:
             </h1>
             <Kalkulator />
@@ -195,5 +196,6 @@ export default Kalkulator
       `}
     </SyntaxHighlighter>
         </div>
+    </div>
     )
 }

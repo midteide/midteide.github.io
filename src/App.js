@@ -7,6 +7,7 @@ import React, {Component} from 'react'
 //import Col from 'react-bootstrap/Col'
 //import Navbar from 'react-bootstrap/Navbar'
 import {BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import 'react-image-lightbox/style.css'; // This only needs to be imported once in your app
 
 //Pages
 import {Home} from './Home'
