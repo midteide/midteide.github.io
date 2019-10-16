@@ -27,6 +27,8 @@ import { Jumbotron } from './components/Jumbotron'
 import Row from 'react-bootstrap/Row'
 
 
+import { pdfjs } from 'react-pdf';
+pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
 
 //import './App.css';
@@ -38,7 +40,7 @@ class App extends Component {
   render(){
     return (
       // <React.Fragment>
-      <div class="container">
+      <div className="container">
         <NavigationBar />
         <Jumbotron />
         <Layout>

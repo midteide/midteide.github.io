@@ -119,8 +119,3 @@ header > p {
   text-align: cen
 }
 
-@media (min-width: 600px) {
-    p {
-        font-size: 1.25rem;;
-    }
-}

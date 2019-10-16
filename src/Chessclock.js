@@ -11,7 +11,7 @@ export const Chessclock = () =>   {
     return (
         <div>
             <Container>
-            <Col xs={12} md={8}>
+            <Col xs={12} >
             <h1>
                 Chess Clock project:
             </h1>
@@ -68,7 +68,7 @@ export const Chessclock = () =>   {
 				<Carousel.Item>
                     <img
                     className="d-block w-100"
-                    src={require("./assets/chessclock/2.png")}
+                    src={require("./assets/chessclock/2.jpg")}
                     alt=""
                     />
                     <Carousel.Caption>
@@ -79,7 +79,7 @@ export const Chessclock = () =>   {
                 
             </Carousel>
             
-			<h2>Source code:</h2>
+			<h2 className="mt-5">Source code:</h2>
             <SyntaxHighlighter language="c" style={docco}>
       {`
       
