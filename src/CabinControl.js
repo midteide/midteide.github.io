@@ -1,100 +1,112 @@
-import React, { Component, Fragment } from 'react';
-import SyntaxHighlighter from 'react-syntax-highlighter';
-import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
-import ImageZoom from 'react-medium-image-zoom'
-import Lightbox from 'react-lightbox-component';
-import 'react-image-lightbox/style.css'; // This only needs to be imported once in your app
+import React, { Component, Fragment } from "react";
+import SyntaxHighlighter from "react-syntax-highlighter";
+import { docco } from "react-syntax-highlighter/dist/esm/styles/hljs";
+import ImageZoom from "react-medium-image-zoom";
+import Lightbox from "react-lightbox-component";
+import "react-image-lightbox/style.css"; // This only needs to be imported once in your app
 import "react-lightbox-component/build/css/index.css";
-import Carousel from 'react-bootstrap/Carousel'
-import Container from 'react-bootstrap/Container'
-import Col from 'react-bootstrap/Col'
-import Card from 'react-bootstrap/Card'
-import CardGroup from 'react-bootstrap/CardGroup'
-import CardDeck from 'react-bootstrap/CardDeck'
-import Button from 'react-bootstrap/Button'
-import Row from 'react-bootstrap/Row'
-import { render } from 'react-dom';
-import Gallery from 'react-grid-gallery';
-import PropTypes from 'prop-types';
+import Carousel from "react-bootstrap/Carousel";
+import Container from "react-bootstrap/Container";
+import Col from "react-bootstrap/Col";
+import Card from "react-bootstrap/Card";
+import CardGroup from "react-bootstrap/CardGroup";
+import CardDeck from "react-bootstrap/CardDeck";
+import Button from "react-bootstrap/Button";
+import Row from "react-bootstrap/Row";
+import { render } from "react-dom";
+import Gallery from "react-grid-gallery";
+import PropTypes from "prop-types";
 
 // https://github.com/benhowell/react-grid-gallery/blob/master/examples/demo6.js
 
 export class CabinControl extends Component {
-  constructor (props){
-    super(props);
-    this.state = {
-      images: this.props.images,
-      modalIsOpen: false,
-      currentImage: 0
+    constructor(props) {
+        super(props);
+        this.state = {
+            images: this.props.images,
+            modalIsOpen: false,
+            currentImage: 0
+        };
     }
-    
-  }
-  
-  render() {
-    const { modalIsOpen } = this.state;
-    const { photoIndex, isOpen } = this.state;
- return (
-      <div className="container">
-        
-        <div className="row">
-        <div className="col">
-            
-          </div> 
-        </div>  
-        <div className="row">
-          <div className="col-12">
-              <h1>CabinControl project:</h1>
-              <br/>
 
-              
-              <p>This project consists of several parts:</p>
-              <ul>
-                  <li>The microcontroller circuitboard design and layout</li>
-                  <li>The microcontroller code</li>
-                  <li>A C# server application for communication with the microcontroller through USB interface</li>
-                  <li>A C# client application for users on any computer to connect into the Server application to view webcamera live video, see sensor data and graphs and set values (temperatures, control camera position etc).</li>
-              </ul>
-
-              <div style={{
-          display: "block",
-          minHeight: "1px",
-          width: "100%",
-          border: "1px solid #ddd",
-          overflow: "auto"}}>
-          <Gallery
-            images={this.state.images}
-            enableLightbox={true}
-            enableImageSelection={false}
-            backdropClosesModal={true}
-            enableKeyboardInput={true}
-            />
+    render() {
+        const { modalIsOpen } = this.state;
+        const { photoIndex, isOpen } = this.state;
+        return (
+            <div className="container">
+                <div className="row mb-4">
+                    <h1>CabinControl project:</h1>
+                    <br />
                 </div>
 
-              <div
-                className="video m-5"
-                style={{
-                  position: "relative",
-                  paddingBottom: "56.25%" /* 16:9 */,
-                  paddingTop: 25,
-                  height: 0
-                }}
-              >
-                <iframe
-                  style={{
-                    position: "absolute",
-                    top: 0,
-                    left: 0,
-                    width: "100%",
-                    height: "100%"
-                    
-                  }}
-                  src={`https://www.youtube.com/embed/1KE7aq1AvCI`}
-                  frameBorder="0"
-                />
-              </div>
-              <h2 className="mt-5 text-center">Source code:</h2>
-              <SyntaxHighlighter language="c" style={docco}>
-              {`
+                <div className="row">
+                    <div className="col-6">
+                        <p>This project consists of several parts:</p>
+                        <ul>
+                            <li>The microcontroller circuitboard design and layout</li>
+                            <li>The microcontroller code</li>
+                            <li>
+                                A C# server application for communication with the
+                                microcontroller through USB interface
+                            </li>
+                            <li>
+                                A C# client application for users on any computer to connect
+                                into the Server application to view webcamera live video, see
+                                sensor data and graphs and set values (temperatures, control
+                                camera position etc).
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div className="col-6">
+                        <div
+                            style={{
+                                display: "block",
+                                minHeight: "1px",
+                                width: "100%",
+                                border: "1px solid #ddd",
+                                overflow: "auto"
+                            }}
+                        >
+                            <Gallery
+                                images={this.state.images}
+                                enableLightbox={true}
+                                enableImageSelection={false}
+                                backdropClosesModal={true}
+                                enableKeyboardInput={true}
+                            />
+                        </div>
+                    </div>
+                </div>
+
+                <div className="row">
+                    <div
+                        className="video m-5"
+                        style={{
+                            position: "relative",
+                            paddingBottom: "56.25%" /* 16:9 */,
+                            paddingTop: 25,
+                            height: 0
+                        }}
+                    >
+                        <iframe
+                            title="."
+                            style={{
+                                position: "absolute",
+                                top: 0,
+                                left: 0,
+                                width: "100%",
+                                height: "100%"
+                            }}
+                            src={`https://www.youtube.com/embed/1KE7aq1AvCI`}
+                            frameBorder="0"
+                        />
+                    </div>
+                </div>
+                <div className="row">
+                    <h2 className="mt-5 text-center">Source code:</h2>
+                    <SyntaxHighlighter language="c" style={docco}>
+                        {`
       
       /*
       * CabinControl.c
@@ -485,7 +497,6 @@ export class CabinControl extends Component {
        //Inne
        V_Pt100 = ( doAdc(5,50) * 5.0) / (1023.0 * (double)GAIN) ;
        resistance =  -2.4 +((V_Pt100 * 5100.0) / (5.0 - V_Pt100));   
-       //kukk = 100.0*((V_Pt100 * 5100.0) / (5.0 - V_Pt100)); 
        int closest = 0;
        double current = pt100Table[0];
        double fine = 0.0;
@@ -533,7 +544,6 @@ export class CabinControl extends Component {
        wdt_reset();										// Reset watchdog
        V_Pt100 = ( doAdc(6,50) * 5.0) / (1023.0 * (double)GAIN) ;
        resistance =  /*-2.4 +*/((V_Pt100 * 5100.0) / (5.0 - V_Pt100));   
-       //kukk = 100.0*((V_Pt100 * 5100.0) / (5.0 - V_Pt100)); 
        closest = 0;
         current = pt100Table[0];
         fine = 0.0;
@@ -719,104 +729,100 @@ export class CabinControl extends Component {
 
       
       `}
-    </SyntaxHighlighter>
-  </div>
-  </div>
-</div>
-
-    )
-  }
+                    </SyntaxHighlighter>
+                </div>
+            </div>
+        );
+    }
 }
 
-
 CabinControl.propTypes = {
-  images: PropTypes.arrayOf(
-      PropTypes.shape({
-          src: PropTypes.string.isRequired,
-          thumbnail: PropTypes.string.isRequired,
-          srcset: PropTypes.array,
-          caption: PropTypes.string,
-          thumbnailWidth: PropTypes.number.isRequired,
-          thumbnailHeight: PropTypes.number.isRequired
-      })
-  ).isRequired
+    images: PropTypes.arrayOf(
+        PropTypes.shape({
+            src: PropTypes.string.isRequired,
+            thumbnail: PropTypes.string.isRequired,
+            srcset: PropTypes.array,
+            caption: PropTypes.string,
+            thumbnailWidth: PropTypes.number.isRequired,
+            thumbnailHeight: PropTypes.number.isRequired
+        })
+    ).isRequired
 };
 
 CabinControl.defaultProps = {
-  images: [
-    {
-      src: require("./assets/cabincontrol/large/1.jpg"),
-      thumbnail: require("./assets/cabincontrol/1.jpg"),
-      
-        thumbnailWidth: 1200,
-        thumbnailHeight: 1200,
-        caption: ""
-    }, 
-    {
-      src: require("./assets/cabincontrol/large/2.jpg"),
-      thumbnail: require("./assets/cabincontrol/2.jpg"),
-      
-      thumbnailWidth: 1200,
-      thumbnailHeight: 1200,
-      caption: ""
-    }, 
-    {
-      src: require("./assets/cabincontrol/large/3.jpg"),
-      thumbnail: require("./assets/cabincontrol/3.jpg"),
-      
-      thumbnailWidth: 1200,
-      thumbnailHeight: 1200,
-      caption: ""
-    }, 
+    images: [
+        {
+            src: require("./assets/cabincontrol/large/1.jpg"),
+            thumbnail: require("./assets/cabincontrol/1.jpg"),
 
-    {
-      src: require("./assets/cabincontrol/large/4.png"),
-      thumbnail: require("./assets/cabincontrol/4.png"),
-      
-      thumbnailWidth: 1200,
-      thumbnailHeight: 1200,
-      caption: ""
-    },
-    {
-      src: require("./assets/cabincontrol/large/5.jpg"),
-      thumbnail: require("./assets/cabincontrol/5.jpg"),
-      
-      thumbnailWidth: 1200,
-      thumbnailHeight: 1200,
-      caption: ""
-    },
-    {
-      src: require("./assets/cabincontrol/large/6.png"),
-      thumbnail: require("./assets/cabincontrol/6.png"),
-    
-      thumbnailWidth: 1200,
-      thumbnailHeight: 1200,
-      caption: ""
-    },
-    {
-      src: require("./assets/cabincontrol/large/7.jpg"),
-      thumbnail: require("./assets/cabincontrol/7.jpg"),
-      
-      thumbnailWidth: 1200,
-      thumbnailHeight: 1200,
-      caption: ""
-    },
-    {
-      src: require("./assets/cabincontrol/large/8.jpg"),
-      thumbnail: require("./assets/cabincontrol/8.jpg"),
-      
-      thumbnailWidth: 1200,
-      thumbnailHeight: 1200,
-      caption: ""
-    },
-    {
-      src: require("./assets/cabincontrol/large/9.jpg"),
-      thumbnail: require("./assets/cabincontrol/9.jpg"),
-      
-      thumbnailWidth: 1200,
-      thumbnailHeight: 1200,
-      caption: ""
-    },
-      
-  ]
+            thumbnailWidth: 1200,
+            thumbnailHeight: 1200,
+            caption: ""
+        },
+        {
+            src: require("./assets/cabincontrol/large/2.jpg"),
+            thumbnail: require("./assets/cabincontrol/2.jpg"),
+
+            thumbnailWidth: 1200,
+            thumbnailHeight: 1200,
+            caption: ""
+        },
+        {
+            src: require("./assets/cabincontrol/large/3.jpg"),
+            thumbnail: require("./assets/cabincontrol/3.jpg"),
+
+            thumbnailWidth: 1200,
+            thumbnailHeight: 1200,
+            caption: ""
+        },
+
+        {
+            src: require("./assets/cabincontrol/large/4.png"),
+            thumbnail: require("./assets/cabincontrol/4.png"),
+
+            thumbnailWidth: 1200,
+            thumbnailHeight: 1200,
+            caption: ""
+        },
+        {
+            src: require("./assets/cabincontrol/large/5.jpg"),
+            thumbnail: require("./assets/cabincontrol/5.jpg"),
+
+            thumbnailWidth: 1200,
+            thumbnailHeight: 1200,
+            caption: ""
+        },
+        {
+            src: require("./assets/cabincontrol/large/6.png"),
+            thumbnail: require("./assets/cabincontrol/6.png"),
+
+            thumbnailWidth: 1200,
+            thumbnailHeight: 1200,
+            caption: ""
+        },
+        {
+            src: require("./assets/cabincontrol/large/7.jpg"),
+            thumbnail: require("./assets/cabincontrol/7.jpg"),
+
+            thumbnailWidth: 1200,
+            thumbnailHeight: 1200,
+            caption: ""
+        },
+        {
+            src: require("./assets/cabincontrol/large/8.jpg"),
+            thumbnail: require("./assets/cabincontrol/8.jpg"),
+
+            thumbnailWidth: 1200,
+            thumbnailHeight: 1200,
+            caption: ""
+        },
+        {
+            src: require("./assets/cabincontrol/large/9.jpg"),
+            thumbnail: require("./assets/cabincontrol/9.jpg"),
+
+            thumbnailWidth: 1200,
+            thumbnailHeight: 1200,
+            caption: ""
+        }
+    ]
 };

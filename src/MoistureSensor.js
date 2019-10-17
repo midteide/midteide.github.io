@@ -14,7 +14,10 @@ export const MoistureSensor = () =>   {
             <h1>
                 Moisturesensor project:
             </h1>
-            <p>This project I did for a large company in order to measure from 8 sensors in the ground. There were tight restrictions on power consumption, a proprietary communications protocol and the sensors needed to be subjected to both positive and negative voltages to prevent corrosion.</p>
+            <p>This project I did for a large company in order to measure from 8 sensors in the ground. 
+              There were tight restrictions with regards to power consumption, a proprietary communications 
+              protocol and the sensors needed to be subjected to both positive and negative voltages to 
+              prevent corrosion.</p>
             <p>The code can be seen below the pictures.</p>
             <br/>
 			<Carousel pauseOnHover="true" fade="true">
@@ -45,7 +48,7 @@ export const MoistureSensor = () =>   {
                 
             </Carousel>
             <div id="plass"></div>
-            <h2>Source code:</h2>
+            <h2 className="mt-5 text-align-center">Source code:</h2>
             </Col>
     </Container>
             <div id="fukt">

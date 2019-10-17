@@ -23,10 +23,10 @@ return (
             <div className="container">
                 <h3 className="mb-5">About me (CV can be seen below)</h3>
                 <article className="row single-post mt-5 no-gutters">
+                    <div className="single-post-content-wrapper flp-3">
                     <div className="image-wrapper float-left pr-3">
-                        <Image className="img-thumbnail m-3" roundedCircle src={require("./assets/meg2.png")}/>
+                        <Image className="img-thumbnail m-3 img-fluid" roundedCircle src={require("./assets/meg2.png")}/>
                     </div>
-                    <div className="single-post-content-wrapper p-3">
                         <p>
                         Since I was a kid I have been interested in computers and electronics. 
                         We got a 386 computer when I was 7 and since then I developed a strong fascination for computers, 
@@ -35,7 +35,7 @@ return (
                         <p>
                             I was always interested in how computer networks work, both serial connection, parallel connection and eventually 
                             coax networks and ethernet. When I went to The Gathering '98 (age 13) I did so by myself just because I wanted to 
-                            connect to a huge network (coax at that time).
+                            connect to a huge local network (coax at that time).
                         </p>
                             
                         <figure className="figure image-wrapper float-right m-3 pl-3">
@@ -44,7 +44,7 @@ return (
                                 src: require("./assets/telefon.jpg"),
                                 alt: 'Homemade phone',
                                 className: 'img-thumbnail figure-img img-fluid rounded-circle',
-                                style: { }
+                                style: { "max-width": "250px" }
                                 }}
                                 zoomImage={{
                                 src: require("./assets/large/telefon.jpg"),
@@ -67,15 +67,20 @@ return (
                     </div>
                     
                 </article>
+                
+
+                </div>
+                <div className="container CV mt-1">
                 <h3 className="mt-5" style={{'text-align': 'center'}}>CV:</h3>
-                    <div className="CV mt-1">
-                    <Document
+                <div className="row CV">
+                <div className="col-12 CV">
+                    <Document className="CV"
                     file="./1.pdf"
                     onLoadSuccess={this.onDocumentLoadSuccess}
                     >
                     <Page pageNumber={pageNumber} />
                     </Document>
-                    <p>Page {pageNumber} of {numPages}</p>
+                    <p className="react-pdf__Page__canvas">Page {pageNumber} of {numPages}</p>
 
                     <Document
                     file="./1.pdf"
@@ -83,7 +88,7 @@ return (
                     >
                     <Page pageNumber={2} />
                     </Document>
-                    <p>Page {2} of {numPages}</p>
+                    <p className="react-pdf__Page__canvas">Page {2} of {numPages}</p>
 
                     <Document
                     file="./1.pdf"
@@ -91,7 +96,7 @@ return (
                     >
                     <Page pageNumber={3} />
                     </Document>
-                    <p>Page {3} of {numPages}</p>
+                    <p className="react-pdf__Page__canvas">Page {3} of {numPages}</p>
 
                     <Document
                     file="./1.pdf"
@@ -99,11 +104,11 @@ return (
                     >
                     <Page pageNumber={4} />
                     </Document>
-                    <p>Page {4} of {numPages}</p>
-               </div>
+                    <p className="react-pdf__Page__canvas">Page {4} of {numPages}</p>
+                    </div>
+                    </div>
+                    </div>
 
-
-                </div>
             </div>
         // </div>
     )

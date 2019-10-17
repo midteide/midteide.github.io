@@ -15,11 +15,11 @@ const Styles = styled.div`
         z-index: -2;
     }
     .overlay {
-        background-color: #000;
+        background-color: #grey;
         color: #fff;
-        opacity: 0.3;
+        opacity: 0.9;
         position: absolute;
-        padding: 70px 50px 50px 50px;
+        padding: 90px 50px 50px 50px;
         
         top: 0;
         left: 0;
@@ -34,7 +34,7 @@ const Styles = styled.div`
     }
     @media screen and (max-width: 760px) {
         .overlay {
-            padding: 50px 20px ;
+            // padding: 50px 20px ;
               
         }
       }
@@ -58,8 +58,8 @@ export const Jumbotron = () => (
         <Jumbo fluid className="jumbo">
             <div className="overlay">
                 <Container className="tekst">
-                    <h4>Alexander Midteide's portfolio</h4>
-                    <p>Here you can see some of my work...</p>
+                    <h4 className="jumbotrontekst">Alexander Midteide's portfolio</h4>
+                    {/* <p>Here you can see some of my work...</p> */}
                 </Container>
             </div>
         </Jumbo>
