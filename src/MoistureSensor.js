@@ -10,7 +10,7 @@ export const MoistureSensor = () =>   {
     return (
         <div>
             <Container id="fukt">
-            <Col xs={12} md={8}>
+            <Col xs={12}>
             <h1>
                 Moisturesensor project:
             </h1>
@@ -48,7 +48,7 @@ export const MoistureSensor = () =>   {
                 
             </Carousel>
             <div id="plass"></div>
-            <h2 className="mt-5 text-align-center">Source code:</h2>
+            <h2 className="mt-5" style={{textAlign: "center"}}>Source code:</h2>
             </Col>
     </Container>
             <div id="fukt">

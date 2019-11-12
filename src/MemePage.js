@@ -6,11 +6,11 @@ import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 export const MemePage = () =>   {
     return (
         <div>
-            <h1>
+            <h1 style={{textAlign: "center"}}>
                 Random meme generator
             </h1>
-            <MemeGenerator />
-            <h1>Source code:</h1>
+            <MemeGenerator/>
+            <h1  className="mt-5" style={{textAlign: "center"}}>Source code:</h1>
         <pre><SyntaxHighlighter language="react" style={docco}>
             {`
             import React, {Component} from "react"

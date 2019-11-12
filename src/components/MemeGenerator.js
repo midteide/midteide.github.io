@@ -57,6 +57,8 @@ class MemeGenerator extends React.Component{
 
     }
 
+    
+
     handleClick(){
         console.log("handleClick")
         let randomNumber = 0;
