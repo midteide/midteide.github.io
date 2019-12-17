@@ -7,13 +7,23 @@ import "../index.css"
 const Styles = styled.div`
     .jumbo {
         background: url(${backgroundImg})  center center / cover no-repeat ;
-        // background-size: cover;
-        
+        opacity: 0%;
+        animation-name: jumboAnimation;
+        animation-duration: 2s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+      
         color: #fff;
         height: 200px;
         position: relative;
         z-index: -2;
     }
+
+    @keyframes jumboAnimation {
+        0% {opacity: 0%; height: 600px;}
+        100% {opacity: 100%; height: 200px;}
+      }
+      
     .overlay {
         background-color: #grey;
         color: #fff;

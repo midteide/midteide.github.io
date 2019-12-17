@@ -19,7 +19,7 @@ import './index.css'
 export const Home = () =>   {
     return (
         
-        <div>
+        <div className="home">
             <Container className="mb-5">
                 <Col xs={12}>
                 

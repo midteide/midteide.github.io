@@ -98,17 +98,36 @@ body {
 
 .card img:hover {
   cursor: pointer;
+  opacity: 50%;
+  transform: rotateX(180deg)
 }
 
 
  
  .card img {
+  transition-property: all;
+  transition-timing-function: ease-in-out;
+  transition-duration: 500ms;
   height: 45%;
   width:100%;
-  
   object-fit: cover;
 
 } 
+
+.home  {
+  opacity: 0%;
+  animation-fill-mode: forwards;
+  animation-name: homeAnimation;
+  animation-duration: 2s;
+  animation-delay: 2s;
+}
+
+@keyframes homeAnimation {
+  0% {opacity: 0%;}
+  100% {opacity: 100%;}
+}
+
+
 @media only screen and (max-width: 400px) {
   .card img {
     height: 45%;

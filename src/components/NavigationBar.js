@@ -7,15 +7,55 @@ const Styles = styled.div`
     .navbar {
         background-color: #222;
         
+        opacity: 0%;
+        animation-fill-mode: forwards;
+        animation-name: navAnimation;
+        animation-duration: 3s;
+        animation-delay: 4s;
+        transition-timing-function: linear;
+
     }
-    .navbar-toggle.collapsed {
+
+
+    }
+    @keyframes navAnimation {
+        0% {opacity: 0%; max-height: 0px;}
+        100% {opacity: 100%; max-height: 50px;}
+    }
+    
+      .navbar-toggle.collapsed {
         background-color: #fff !important;
     }
-    .navbar-brand, .navbar-nav .nav-link {
+    .navbar-brand, .navbar-nav {
         color: #ddd;
         &:hover {
             color: white;
         }
+    }
+    .nav-link {
+        color: #ddd!important;
+        border-radius: 0.3rem;
+
+        
+    }
+    .nav-link:hover {
+        //margin: 5px;
+        cursor: pointer;
+        background-color: #ddd;
+        font-size: 0.8rem;
+        color: black!important;
+        border-radius: 3rem;
+        font-weight: bold;
+
+        
+      }
+      
+    .nav-link {
+    transition-property: border-radius, background-color, color;
+    transition-duration: 4000ms, 200ms, 200ms;
+    transition-delay: 800ms, 0, 200ms;
+    transition-timing-function: ease-in-out;
+    
     }
 `;
 
