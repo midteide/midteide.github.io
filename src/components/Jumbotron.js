@@ -9,10 +9,10 @@ const Styles = styled.div`
         background: url(${backgroundImg})  center center / cover no-repeat ;
         opacity: 0%;
         animation-name: jumboAnimation;
-        animation-duration: 2s;
+        animation-duration: 3s;
         animation-timing-function: ease-in-out;
         animation-fill-mode: forwards;
-      
+        border-radius: 1rem;
         color: #fff;
         height: 200px;
         position: relative;

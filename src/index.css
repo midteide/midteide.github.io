@@ -99,26 +99,33 @@ body {
 .card img:hover {
   cursor: pointer;
   opacity: 50%;
+  border-radius: 50%;
+
+  /* transform: rotateX(180deg) */
+}
+.card img:active {
   transform: rotateX(180deg)
+  
 }
 
 
  
  .card img {
+  border-radius: 1rem;
   transition-property: all;
   transition-timing-function: ease-in-out;
-  transition-duration: 500ms;
+  transition-duration: 200ms;
   height: 45%;
   width:100%;
   object-fit: cover;
 
 } 
 
-.home  {
-  opacity: 0%;
-  animation-fill-mode: forwards;
+.homes  {
   animation-name: homeAnimation;
+  animation-fill-mode: forwards;
   animation-duration: 2s;
+  animation-timing-function: ease-out;
   animation-delay: 2s;
 }
 

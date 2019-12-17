@@ -19,8 +19,8 @@ const Styles = styled.div`
 
     }
     @keyframes navAnimation {
-        0% {opacity: 0%; max-height: 0px;}
-        100% {opacity: 100%; max-height: 50px;}
+        0% {opacity: 0%; transform: translateY(-50px)}
+        100% {opacity: 100%; transform: translateY(0)}
     }
     
       .navbar-toggle.collapsed {
