@@ -1,0 +1,295 @@
+
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.carousel-caption {
+  width:100%;
+  height:100%;
+  left:0 !important;
+  color: black;
+  text-shadow: 0 0 5px white; 
+  
+  
+}
+
+.carousel-caption h3 {
+  text-align:left;
+  margin-left:30px;
+}
+
+.carousel-caption p {
+  color: pink;
+}
+
+#bildekarusell {
+  padding-top: 25;
+  
+}
+
+body { 
+  font-family: 'Lustria', serif;
+    
+  padding-top: 70px; 
+}
+
+
+
+.navFont {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.8rem;
+}
+
+.brand-font {
+  font-size: 0.9rem;
+}
+
+/*
+
+  font-family: 'Orbitron', sans-serif;
+  font-family: 'Press Start 2P', cursive;
+  font-family: 'Lustria', serif;
+  font-family: 'Kalam', cursive; 
+  
+  */
+
+  h5 {
+    font-size: 1rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+    font-style: oblique;
+  }
+  h1 {
+    font-size: 1.7rem;
+    font-style: oblique;
+    font-weight: bold;
+    text-decoration: underlin;
+  }
+
+  p {
+    font-size: 0.9em;
+  }
+    
+
+
+.card {
+  height: 400px;
+  margin-bottom: 10px!important;
+  min-width: 270px!important;
+}
+
+.card img:hover {
+  cursor: pointer;
+  opacity: 100%;
+  border-radius: 1rem;
+
+  /* transform: rotateX(180deg) */
+}
+.card img:active {
+  transform: rotateX(180deg)
+  
+}
+
+
+ 
+ .card img {
+  border-radius: 50%;
+  transition-property: all;
+  transition-timing-function: ease-in-out;
+  transition-duration: 200ms;
+  height: 45%;
+  width:100%;
+  object-fit: cover;
+  opacity: 50%;
+
+} 
+
+.homes  {
+  animation-name: homeAnimation;
+  animation-fill-mode: forwards;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+  animation-delay: 2s;
+}
+
+@keyframes homeAnimation {
+  0% {opacity: 0%;}
+  100% {opacity: 100%;}
+}
+
+
+@media only screen and (max-width: 400px) {
+  .card img {
+    height: 45%;
+    width:100%;
+    
+    object-fit: scale-down;
+  
+  } 
+}
+
+
+
+@media screen (max-width: 767px){
+  .card img {
+    height: 100%;
+    width:100%;
+    
+    object-fit: scale-down;
+  
+  } 
+
+  
+}
+
+.tekst h1{
+  font-size: 1.3em;
+  
+}
+.tekst p{
+  font-size: 0.9em;
+}
+
+@media screen and (min-width: 480px) {
+  .tekst h1{
+    font-size: 1.7em;
+  }
+}
+
+@media screen and (min-width: 641px) {
+  .tekst h1{
+    font-size: 2em;
+  }
+}
+
+
+
+ .img-thumbnail {
+   max-width: 190px;
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: 0;
+   text-align: ;
+   
+ }
+
+ .centered { float: none; margin-left: 0; margin-right: 0; }
+
+
+ .frame {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+  background: white;
+  transform: translateZ(0);
+}
+
+.figure-caption {
+  font-weight: bolder;
+  font-style: italic;
+  font-size: 0.7em;
+  text-align: center;
+  color: black;
+  
+}
+.tiles {
+  padding: 6vh 16vw;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+}
+.tile {
+  margin: 15px;
+  cursor: pointer;
+  overflow: hidden;
+  width: 18vw;
+  height: 18vw;
+  img {
+      width: 100%;
+      transition: transform 500ms ease;
+      &:hover {
+          transform: scale(1.1);
+      }
+  }
+}
+
+
+.overlay:target .close:before {
+  position: fixed;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+
+.overlay { z-index: 5; }
+.lightbox image { z-index: 15; }
+.close { 
+  position: absolute;
+  top: 50px;
+  left: 50%;
+} 
+
+
+img {
+  overflow: 
+}
+
+.react-pdf__Page__canvas {
+  margin-left: auto!important;
+  margin-right: auto!important;
+  align-content: center;
+  text-align: center;
+}
+
+.jumbotrontekst {
+  font-size: 3vw;
+  /* font-family: 'Crafty Girls', cursive; */
+  font-family: 'Sofia', cursive;
+  /* text-shadow: 0px 3px 0px #b2a98f,
+                 0px 14px 10px rgba(0,0,0,0.15),
+                 0px 24px 2px rgba(0,0,0,0.1),
+                 0px 34px 30px rgba(0,0,0,0.1); */
+  color: rgba(255,255,255,0.99);
+  /* text-shadow: 4px 8px 6px rgba(0,0,0,0.2),
+                0px -5px 35px rgba(255,255,255,0.3); */
+  font-style: italic;
+
+  text-shadows: 0 1px 0 #ccc, 
+               0 2px 0 #c9c9c9,
+               0 3px 0 #bbb,
+               0 4px 0 #b9b9b9,
+               0 5px 0 #aaa,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
+}             
+@media screen and (max-width: 760px) {
+  .jumbotrontekst {
+    font-size: 30px;
+        
+  }
+}

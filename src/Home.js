@@ -12,14 +12,14 @@ import ImageZoom from 'react-medium-image-zoom'
 
 
 
-import './index.css'
+import styles from './Home.module.css'
 
 
 
 export const Home = () =>   {
     return (
         
-        <div className="home">
+        <div className={styles.Home}>
             <Container className="mb-5">
                 <Col xs={12}>
                 
@@ -42,6 +42,30 @@ export const Home = () =>   {
                                 <Card.Title><h3>CabinControl</h3></Card.Title>
                                 <Card.Text>
                                     <h5>C/C# project for controlling webcam via servos, getting sensor data (temperatures/snow depth/light levels etc.) and setting target temp inside.</h5>
+                                </Card.Text>
+                            </Card.Body>
+                            
+                        </Card></Col>
+
+                    <Col xs={12} md={6} lg={4}>
+                        <Card onClick={ () => window.location = "/typinggame"}>
+                            <Card.Img variant="top" src={require("./assets/typinggame/typinggame1.png")}  />
+                            <Card.Body>
+                                <Card.Title><h3>Typing game!</h3></Card.Title>
+                                <Card.Text>
+                                    <h5>How fast can you type? A fun project I did to try the different parts of React.</h5>
+                                </Card.Text>
+                            </Card.Body>
+                            
+                        </Card></Col>
+
+                    <Col xs={12} md={6} lg={4}>
+                        <Card onClick={ () => window.location = "/moviesearch"}>
+                            <Card.Img variant="top" src={require("./assets/moviesearch/moviesearch1.png")}  />
+                            <Card.Body>
+                                <Card.Title><h3>Need movie recommendation?</h3></Card.Title>
+                                <Card.Text>
+                                    <h5>This app takes a keyword from the user and comes up with movie suggestions based on data from IMDB.</h5>
                                 </Card.Text>
                             </Card.Body>
                             

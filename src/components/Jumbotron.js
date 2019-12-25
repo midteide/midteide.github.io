@@ -10,7 +10,7 @@ const Styles = styled.div`
         opacity: 0%;
         animation-name: jumboAnimation;
         animation-duration: 3s;
-        animation-timing-function: ease-in-out;
+        animation-timing-function: ease-out;
         animation-fill-mode: forwards;
         border-radius: 1rem;
         color: #fff;
@@ -20,7 +20,7 @@ const Styles = styled.div`
     }
 
     @keyframes jumboAnimation {
-        0% {opacity: 0%; height: 600px;}
+        0% {opacity: 0%; height: 400px;}
         100% {opacity: 100%; height: 200px;}
       }
       

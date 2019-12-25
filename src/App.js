@@ -18,6 +18,8 @@ import {MemePage} from './MemePage'
 import {MoistureSensor} from './MoistureSensor'
 import {CabinControl} from './CabinControl'
 import {Chessclock} from './Chessclock'
+import {Typinggame} from './Typinggame'
+import {Moviesearch} from './Moviesearch'
 import {NoMatch} from './NoMatch'
 
 
@@ -55,6 +57,8 @@ class App extends Component {
               <Route path="/MoistureSensor" component={MoistureSensor} />
               <Route path="/CabinControl" component={CabinControl} />
               <Route path="/chessclock" component={Chessclock} />
+              <Route path="/typinggame" component={Typinggame} />
+              <Route path="/moviesearch" component={Moviesearch} />
               <Route component={NoMatch} />
             </Switch>
           </Router>
